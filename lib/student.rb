@@ -31,6 +31,7 @@ class Student
     SQL
     row = db[:conn].execute(sql, name)
     student = new_from_db(row)
+    student
     binding.pry
     # find the student in the database given a name
     # return a new instance of the Student class
