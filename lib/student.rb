@@ -24,7 +24,7 @@ class Student
 
   def self.find_by_name(name)
     sql = <<-SQL
-    SELECT * FROM students WHERE name = ?
+    SELECT * FROM students WHERE students.name = ?
     SQL
     row = DB[:conn].execute(sql, name).flatten
     student = new_from_db(row)
