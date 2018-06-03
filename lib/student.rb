@@ -18,7 +18,6 @@ class Student
     students = []
     all.each {|row| students << new_from_db(row)}
     students
-    binding.pry
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
   end
