@@ -6,9 +6,9 @@ class Student
 
   def self.new_from_db(row)
     obj = self.new
-    obj.id = row.id
-    obj.name = row.name
-    obj.grade = row.grade
+    #obj.id = row.id
+    #obj.name = row.name
+    #obj.grade = row.grade
     binding.pry
     # create a new Student object given a row from the database
   end
