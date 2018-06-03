@@ -15,8 +15,8 @@ class Student
   end
 
   def self.all
-    all = DB[:conn].execute("SELECT * FROM students").each {|row| new_from_db(row)}
-    all
+    all = DB[:conn].execute("SELECT * FROM students")
+    all.each {|row| new_from_db(row)}
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
   end
