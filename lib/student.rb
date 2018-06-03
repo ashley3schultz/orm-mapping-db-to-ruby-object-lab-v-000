@@ -4,11 +4,14 @@ class Student
 
   @@all = []
 
+  def initialize(row)
+    @id = row[0]
+    @name = row[1]
+    @grade = row[2]
+  end 
+  
   def self.new_from_db(row)
-    obj = self.new
-    obj.id = row[0]
-    obj.name = row[1]
-    obj.grade = row[2]
+    self.new(row)
     # create a new Student object given a row from the database
   end
 
