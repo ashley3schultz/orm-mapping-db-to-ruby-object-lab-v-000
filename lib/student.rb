@@ -1,8 +1,11 @@
 class Student
   attr_accessor :id, :name, :grade
 
+  def initialize(name, grade)
+
   def self.new_from_db(row)
-    self.new
+    row.map do |r| 
+      self.new(row[0], row[1], row[2])
     # create a new Student object given a row from the database
   end
 
