@@ -17,6 +17,7 @@ class Student
     all = DB[:conn].execute("SELECT * FROM students")
     students = all.each {|row| new_from_db(row)}
     students
+    binding.pry
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
   end
@@ -30,7 +31,7 @@ class Student
   def self.count_all_students_in_grade_9
 
   end
-    
+
 
   def save
     sql = <<-SQL
