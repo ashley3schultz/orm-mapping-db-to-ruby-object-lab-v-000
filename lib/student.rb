@@ -3,9 +3,9 @@ class Student
 
   def initialize(id, name, grade)
     @id = id
-    @name = name 
-    @grade = grade 
-  end 
+    @name = name
+    @grade = grade
+  end
 
   def self.new_from_db(row)
     self.new(row[0], row[1], row[2])
