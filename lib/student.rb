@@ -15,7 +15,8 @@ class Student
 
   def self.all
     all = DB[:conn].execute("SELECT * FROM students")
-    students = all.each {|row| new_from_db(row)}
+    students = []
+    all.each {|row| students << new_from_db(row)}
     students
     binding.pry
     # retrieve all the rows from the "Students" database
