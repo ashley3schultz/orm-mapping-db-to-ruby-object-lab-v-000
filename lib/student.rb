@@ -4,8 +4,9 @@ class Student
   def initialize(name, grade)
 
   def self.new_from_db(row)
-    row.map do |r| 
+    row.map do |r|
       self.new(row[0], row[1], row[2])
+    end
     # create a new Student object given a row from the database
   end
 
