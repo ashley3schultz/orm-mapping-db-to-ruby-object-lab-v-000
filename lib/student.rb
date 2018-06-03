@@ -9,6 +9,7 @@ class Student
     o.id = "1"
     o.name = "Pat"
     o.grade = 12
+    binding.pry
     #@@all << self
     # create a new Student object given a row from the database
   end
