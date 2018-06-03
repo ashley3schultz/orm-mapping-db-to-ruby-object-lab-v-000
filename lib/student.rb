@@ -9,8 +9,8 @@ class Student
     @name = row[1]
     @grade = row[2]
     @@all << self
-  end 
-  
+  end
+
   def self.new_from_db(row)
     self.new(row)
     # create a new Student object given a row from the database
