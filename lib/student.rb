@@ -8,8 +8,8 @@ class Student
     @id = row[0]
     @name = row[1]
     @grade = row[2]
-  end 
-  
+  end
+
   def self.new_from_db(row)
     self.new(row)
     # create a new Student object given a row from the database
