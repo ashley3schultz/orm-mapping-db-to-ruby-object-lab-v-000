@@ -2,6 +2,8 @@ require 'pry'
 class Student
   attr_accessor :id, :name, :grade
 
+  @@all = []
+
   def self.new_from_db(row)
     obj = self.new
     obj.id = row[0]
@@ -26,7 +28,8 @@ class Student
     FROM students
     WHERE name = ?
     SQL
-    db[:conn].execute(sql)
+    row = db[:conn].execute(sql, name)
+    new_from_db(row)
     # find the student in the database given a name
     # return a new instance of the Student class
   end
