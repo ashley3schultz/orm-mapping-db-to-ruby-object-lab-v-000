@@ -6,14 +6,13 @@ class Student
 
   def initialize
     binding.pry
-  end 
+  end
 
   def self.new_from_db(row)
     o = self.new
     o.id = row[0]
     o.name = row[1]
     o.grade = row[2]
-    binding.pry
     #@@all << self
     # create a new Student object given a row from the database
   end
