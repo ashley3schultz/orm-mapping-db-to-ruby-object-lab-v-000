@@ -24,8 +24,8 @@ class Student
 
   def self.find_by_name(name)
     binding.pry
-    sql = "SELECT * FROM students WHERE name = ?"
-    DB[:conn].execute(sql, name).flatten
+    sql = ""
+    DB[:conn].execute("SELECT * FROM students WHERE name = ?", name)
     student = new_from_db(row)
 
     # find the student in the database given a name
