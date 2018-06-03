@@ -28,7 +28,7 @@ class Student
 
   def self.count_all_students_in_grade_9
     students = all.collect { |s| s.grade == "9"}
-    students.size
+    students
   end
 
 
