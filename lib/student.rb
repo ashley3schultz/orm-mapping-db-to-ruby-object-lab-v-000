@@ -5,7 +5,7 @@ class Student
   @@all = []
 
   def self.new_from_db(row)
-    #o = 
+    #o =
     self.new
     #o.id = row[0]
     #o.name = row[1]
