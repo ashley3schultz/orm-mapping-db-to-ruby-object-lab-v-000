@@ -23,7 +23,7 @@ class Student
   end
 
   def self.find_by_name(name)
-    row = DB[:conn].execute("SELECT * FROM students WHERE name = ?", name)
+    row = DB[:conn].execute("SELECT * FROM students WHERE name = ?", name).flatten
     student = new_from_db(row)
     binding.pry
     # find the student in the database given a name
