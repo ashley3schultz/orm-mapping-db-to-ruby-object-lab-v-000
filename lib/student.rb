@@ -11,12 +11,12 @@ class Student
     o.grade = row[2]
     @@all << o
     o
-    # create a new Student object given a row from the database
   end
 
   def self.all
     all = DB[:conn].execute("SELECT * FROM students")
-    all.each {|row| new_from_db(row)}
+    students = all.each {|row| new_from_db(row)}
+    students
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
   end
@@ -25,9 +25,10 @@ class Student
     row = DB[:conn].execute("SELECT * FROM students WHERE name = ?", name).flatten
     student = new_from_db(row)
     student
-    # find the student in the database given a name
-    # return a new instance of the Student class
   end
+
+  def self.count_all_students_in_grade_9
+    
 
   def save
     sql = <<-SQL
