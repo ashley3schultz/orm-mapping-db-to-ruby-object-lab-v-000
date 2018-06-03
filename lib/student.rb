@@ -6,7 +6,7 @@ class Student
 
   def self.new_from_db(row)
     o = self.new
-    o.id = 1.to_s
+    o.id = "1"
     o.name = "Pat"
     o.grade = 12
     #@@all << self
