@@ -4,6 +4,10 @@ class Student
 
   @@all = []
 
+  def initialize
+    binding.pry
+  end 
+
   def self.new_from_db(row)
     o = self.new
     o.id = row[0]
