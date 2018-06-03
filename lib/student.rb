@@ -29,7 +29,7 @@ class Student
     FROM students
     WHERE name = ?
     SQL
-    row = db[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name)
     student = new_from_db(row)
     student
     binding.pry
