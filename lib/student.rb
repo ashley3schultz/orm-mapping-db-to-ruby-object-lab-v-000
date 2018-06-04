@@ -38,7 +38,7 @@ class Student
 
   def self.first_X_students_in_grade_10(arg)
     binding.pry
-    students = all.collect { |s| s.grade == "10"}
+    students = all.select { |s| s.grade == "10"}
     students
   end
 
