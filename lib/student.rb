@@ -31,6 +31,11 @@ class Student
     students
   end
 
+  def self.students_below_12th_grade
+    students = all.select { |s| s.grade.to_i < 12}
+    students
+  end
+
 
   def save
     sql = <<-SQL
