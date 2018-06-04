@@ -49,7 +49,6 @@ class Student
 
   def self.all_students_in_grade_X(grd)
       all.select { |s| s.grade == grd}
-    end
   end
 
 
