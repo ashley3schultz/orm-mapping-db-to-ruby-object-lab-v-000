@@ -41,7 +41,10 @@ class Student
     students = []
     all.each {|row| students << new_from_db(row)}
     students
-    #binding.pry
+  end
+
+  def self.first_student_in_grade_10
+    all.detect { |s| s.grade == "10"}
   end
 
 
