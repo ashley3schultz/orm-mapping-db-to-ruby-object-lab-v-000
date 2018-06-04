@@ -36,10 +36,10 @@ class Student
     students
   end
 
-  def self.first_X_students_in_grade_10(arg)
-    #binding.pry
-    students = all.select { |s| s.grade == "10"}
-    students
+  def self.first_X_students_in_grade_10(max)
+    row = DB[:conn].execute("SELECT * FROM students WHERE grade = 10 LIMIT ?", max).flatten
+    student = new_from_db(row)
+    student
   end
 
 
