@@ -36,7 +36,8 @@ class Student
     students
   end
 
-  def self.first_X_students_in_grade_10
+  def self.first_X_students_in_grade_10(arg)
+    binding.pry
     students = all.collect { |s| s.grade == "10"}
     students
   end
