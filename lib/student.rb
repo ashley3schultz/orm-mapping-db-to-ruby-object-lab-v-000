@@ -36,8 +36,8 @@ class Student
     students
   end
 
-  def self.first_X_students_in_grade_10(max)
-    all = DB[:conn].execute("SELECT * FROM students WHERE grade = 10 LIMIT ?", max).flatten
+  def self.first_X_students_in_grade_10(num)
+    all = DB[:conn].execute("SELECT * FROM students WHERE grade = 10 LIMIT ?", num).flatten
     students = []
     all.each {|row| students << new_from_db(row)}
     students
