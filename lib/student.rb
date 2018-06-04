@@ -48,7 +48,8 @@ class Student
   end
 
   def self.all_students_in_grade_X(grd)
-      all.select { |s| s.grade == grd}
+    all.select { |s| s.grade == grd}
+    binding.pry
   end
 
 
