@@ -41,6 +41,7 @@ class Student
     students = []
     all.each {|row| students << new_from_db(row)}
     students
+    binding.pry
   end
 
 
