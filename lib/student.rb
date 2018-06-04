@@ -47,6 +47,11 @@ class Student
     all.detect { |s| s.grade == "10"}
   end
 
+  def self.all_students_in_grade_X(grd)
+      all.select { |s| s.grade == grd}
+    end
+  end
+
 
   def save
     sql = <<-SQL
